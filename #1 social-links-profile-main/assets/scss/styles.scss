@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(0, 0%, 8%);
+}
+
+.card {
+  width: 50%;
+  height: 100%;
+  background-color: hsl(0, 0%, 12%);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  padding: 5%;
+  margin: 25%;
+  font-family: 'Inter', sans-serif;
+}
+
+#top {
+  text-align: center;
+}
+
+.profile img {
+  width: 6rem;
+  height: 6rem;
+  clip-path: circle();
+}
+
+.name {
+  font-size: 2rem;
+}
+
+address {
+  color: hsl(75, 94%, 57%);
+  padding-bottom: 10%;
+}
+
+#contact {
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+    background-color: hsl(0, 0%, 20%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    width: 15rem;
+    height: 2.5rem;
+
+    a {
+      color: hsl(0, 0%, 100%);
+      text-decoration: none;
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    &:hover {
+      background-color: hsl(75, 94%, 57%);
+
+      a {
+        color: hsl(0, 0%, 8%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 90%;          // 모바일에서는 화면 거의 다 쓰게
+    padding: 2rem 1rem;   // 여백도 살짝 줄이고
+  }
+
+  .name {
+    font-size: 1.5rem;    // 글씨 크기 살짝 줄이기
+  }
+
+  address {
+    padding-bottom: 1rem; // 여백 조절
+  }
+
+  #contact li {
+    width: 100%;          // 버튼들 가로 길이 꽉 차게
+  }
+
+  .profile img {
+    width: 5rem;          // 프로필 이미지도 조금 작게
+    height: 5rem;
+  }
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url(../font/Inter/Inter-VariableFont_opsz\,wght.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
